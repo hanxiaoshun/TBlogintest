@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="data-spm" content="a1z9u">
+    <title>新建直播</title>
+    <link rel="shortcut icon" href="//img.alicdn.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body data-spm="8142865">
+    <script>
+        with(document) with(body) with(insertBefore(createElement("script"), firstChild)) setAttribute("exparams", "category=&userid=833462752&aplus&yunid=&3e6e71eb71e67&trid=0b52063915818269950356058ee473&asid=AeChrTGzw0heTOhkJQAAAACE6Wg5l/A1ug==", id = "tb-beacon-aplus", src = (location > "https" ? "//g" : "//g") + ".alicdn.com/alilog/mlog/aplus_v2.js")
+    </script>
+
+    <!--[if lt IE 10]>
+    <style type="text/css">
+      .J_ie-compatible-wrapper{position: fixed;left: 0;top: 0;bottom: 0;right: 0;z-index: 100000;}
+      .tb-popout-mask{background-color: rgb(0,0,0);text-align: center;width: 100%;height: 100%;position: absolute;left: 0;top: 0;filter:alpha(opacity=50);opacity:0.5}
+      .tb-mock-bg{width: 100%;}
+      .tb-popout-img{background-image: url("//gw.alicdn.com/mt/TB1Lz3hRVXXXXamXVXXXXXXXXXX-584-419.png");width: 584px;height: 419px;position: absolute;left: 50%;top: 50%;margin-left: -292px;margin-top: -210px;}
+      .tb-chrome-link{color: #71a403;width: 130px;height: 32px;text-align: center;position: absolute;left: 55px;top: 107px;line-height: 32px;}
+      .ks-ie div.tb-ie-updater-layer{display:none}
+      .ks-ie div.tb-ie-updater-box{display:none}
+    </style>
+    <div class="J_ie-compatible-wrapper">
+      <img class="tb-mock-bg" src="//gw.alicdn.com/mt/TB1n9EoRVXXXXaRXFXXXXXXXXXX-1340-1082.png">
+      <div class="tb-popout-mask"></div>
+      <div class="tb-popout-img">
+        <a class="tb-chrome-link" href="http://www.google.cn/chrome/browser/desktop/">谷歌 Chrome</a>
+      </div>
+    </div>
+  <![endif]-->
+    <script src="//g.alicdn.com/mtb/lib-mtop/2.4.0/mtop.js"></script>
+    <script src="//g.alicdn.com/cm/video-upload-sdk/0.1.4/js/videouploadsdk.js"></script>
+    <!-- 直播中控台导航菜单 -->
+    <script src="https://hudong.alicdn.com/api/data/v2/9d007b7f52724049a827814169436d0c.js"></script>
+    <script>
+        window.configData = {
+            atmosphere: 0,
+            link: {
+                create: '/live/addLive.htm',
+                control: '/live/live_detail.htm',
+                display: '/live/uptBroadcastTidbits.htm',
+                atmosphere: '/live/uptZanicon.htm',
+                myLive: '/live/liveList.htm',
+                createNotice: '/live/publishPreLive.htm',
+                itemCheck: '/live/itemCheck.htm',
+                dataBoard: '/live/dataBoard.htm'
+            }
+        }
+    </script>
+    <style type="text/css">
+        .top-bar {
+            height: 90px;
+            background-color: #fff;
+            margin-bottom: 20px;
+            display: flex;
+            -webkit-font-smoothing: auto;
+            font-family: Lantinghei SC, Microsoft YaHei, STHeiti, SimHei, simsun;
+            font-weight: lighter;
+        }
+        
+        .top-nav-logo {
+            width: 280px;
+            background: url(//img.alicdn.com/tps/TB16I3NKVXXXXX5XFXXXXXXXXXX-280-100.png) no-repeat center center;
+            height: 100px;
+            overflow: hidden;
+            margin-left: 20px
+        }
+        
+        .top-nav-logo .top-nav-logo-msg {
+            text-align: center;
+            color: #fff;
+            margin-top: 60px;
+            font-size: 16px
+        }
+        
+        .nav-bar-wrap {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            min-width: 800px;
+            margin-left: 20px;
+            margin-right: 20px
+        }
+        
+        .top-nav-bar {
+            width: auto;
+            height: 90px;
+            background: #fff
+        }
+        
+        .top-nav-content {
+            display: flex;
+            margin-left: 40px
+        }
+        
+        .top-nav-content>a {
+            margin-right: 30px;
+            height: 44px;
+            width: 120px;
+            padding-top: 42px;
+            font-size: 20px;
+            color: #333;
+            text-align: center;
+            border-bottom: 4px solid transparent
+        }
+        
+        .top-nav-content>a:hover {
+            color: #ff5000
+        }
+        
+        .top-nav-content>a.v-link-active {
+            color: #ff5000;
+            border-bottom: 4px solid #f50
+        }
+        
+        .top-user-info {
+            vertical-align: bottom;
+            color: #5d5d5d
+        }
+        
+        .top-user-info img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            margin-right: 15px;
+            position: relative;
+            top: 8px
+        }
+        
+        .top-user-info a {
+            cursor: pointer
+        }
+        
+        @media screen and (max-width: 1200px) {
+            .top-nav-content {
+                margin-left: 0px;
+            }
+            .top-nav-content>a {
+                margin-right: 5px;
+            }
+            .nav-bar-wrap {
+                margin-right: 10px;
+            }
+            .nav-bar-wrap {
+                min-width: 600px;
+            }
+            .top-nav-content>a {
+                width: 115px;
+            }
+        }
+        
+        @media screen and (max-width: 1080px) {
+            .top-nav-logo {
+                width: 230px
+            }
+        }
+    </style>
+    <script type="text/template" id="nav-bar-tpl">
+        <div class="top-bar">
+            <div class="top-nav-logo">
+                <div class="top-nav-logo-msg">
+                    阿里多媒体中心
+                </div>
+            </div>
+            <div class="nav-bar-wrap">
+                <div class="top-nav-bar">
+                    <div class="top-nav-content" data-spm="1999423129" v-if="from == 'platform'">
+                        <a v-link="{path:'/dashboard',replace: true}">首页</a>
+                        <a href="http://ugc.taobao.com/seller/video/manage.htm?spm=5299.8104629.22222.2.pgJcXh#/mobile" target="_blank">淘宝视频</a>
+                        <a v-link="{path:'/solution',replace: true}">互动视频</a>
+                        <a v-link="{path:'/material',replace: true}">营销素材</a>
+                    </div>
+                    <div class="top-nav-content" v-if="from == 'live'">
+                        <a :class="activeType == 'dashboard'?'v-link-active':''" href="/#!dashboard">控制中心</a>
+                        <a href="http://ugc.taobao.com/seller/video/manage.htm?spm=5299.8104629.22222.2.pgJcXh#/mobile" target="_blank">淘宝视频</a>
+                        <a :class="activeType == 'solution'?'v-link-active':''" href="/#!/solution">互动视频</a>
+                        <a :class="activeType == 'material'?'v-link-active':''" href="/#!/material">营销素材</a>
+                    </div>
+                </div>
+                <div class="top-user-info">
+                    <img :src="userInfo.userIcon" data-width="50" data-height="50">
+                    <span>{{userInfo.userNick}}&#12288;|&#12288;<a @click="logout">退出</a></span>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script>
+        var ITEM_MATERIAL_CONFIG = [{
+            "from": "alitrip",
+            "feedType": "800",
+            "type": "alitrip",
+            "name": "航旅宝贝",
+            "action": {
+                "type": "link",
+                "value": "//media.alitrip.com/video/interaction/showMaterial.htm"
+            },
+            "dailyAction": {
+                "type": "link",
+                "value": "//media.daily.alitrip.net/video/interaction/showMaterial.htm"
+            }
+        }]
+    </script>
+
+
+
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="//g.alicdn.com/??mtb/app-live-drlivebg/2.13.41/pages/create-live/index.css">
+
+
+    <div id="J_container"></div>
+    <!-- 直播中控台帮助列表 -->
+    <script src="https://hudong.alicdn.com/api/data/v2/11559fce518e4e6786d675644478dddf.js"></script>
+    <script>
+        window.pageData = {
+            detailUrl: '//liveplatform.taobao.com/live/live_detail.htm',
+            bindYouku: 'true',
+            showShare2YoukuOpt: 'false',
+            isTmall: 'false',
+            isPgc: 'false',
+            lcps: '',
+            isBrandSeller: 'false',
+            favorImg: '',
+            memberCardTitle: '',
+            shopName: '',
+            hasShop: 'false',
+            memberCardBanner: ''
+        }
+        window.apiParams = {
+            upload: "pic_common_upload",
+            imgcrop: "pic_common_crop",
+            fileupload: "zip_upload"
+        }
+        window.api = {
+            // 上传
+            upload: "/live/action.do",
+            fileupload: "/live/action.do",
+            // 裁剪
+            imgcrop: "/live/action.do",
+            // 发布直播
+            startLive: "/live/action.do?api=publish_live",
+            // 发布
+            publish: "/live/action.do?api=publish_pre_live",
+            // 获取宝贝信息
+            getItemInfo: "/live/action.do?api=item_getItem"
+        }
+    </script>
+
+
+
+    <!-- 小蜜 -->
+    <link rel="stylesheet" href="//g.alicdn.com/crm/anywhere/4.9.63/lib/entry.css" crossorigin charset="utf-8">
+    <script src="//g.alicdn.com/crm/anywhere/4.9.63/lib/entry.js" crossorigin charset="utf-8"></script>
+    <input type="hidden" id="J_TB_TOKEN" name="_tb_token_" value="3e6e71eb71e67" />
+
+
+
+    <script>
+        var pageData = window.pageData || (window.pageData = {});
+        pageData._tb_token_ = "3e6e71eb71e67";
+        pageData.sys = 'ONLINE'; //DAILY、PRE、ONLINE
+        var sys = window.pageData.sys; //DAILY、PRE、ONLINE
+        if (['DAILY', 'PRE', 'ONLINE'].indexOf(sys) === -1) {
+            // 如果不在测试、线上部署环境，则下面逻辑不执行
+
+            // 项目地址，webpack代码分割使用
+            window.pageData.baseUrl = '../../dist/';
+        } else {
+            window.pageData.baseUrl = "//g.alicdn.com/??mtb/drlivebg/2.0.2/";
+        }
+        window.api || (window.api = {});
+        window.api['logoutUrl'] = '//login.taobao.com/member/logout.jhtml?spm=0.0.0.0.aGaEFe&amp;f=top&amp;out=true&amp;redirectURL=http://liveplatform.taobao.com';
+        pageData.userInfo = {
+            userNick: '李凤杰0923',
+            avatar: '//wwc.alicdn.com/avatar/getAvatar.do?userId=833462752&amp;width=160&amp;height=160&amp;type=sns',
+            isShop: 'true'
+        }
+    </script>
+
+
+
+
+    <script src="//g.alicdn.com/??mtb/app-live-drlivebg/2.13.41/pages/create-live/index.js" charset="utf-8" crossorigin></script>
+
+
+
+</body>
+
+</html>
